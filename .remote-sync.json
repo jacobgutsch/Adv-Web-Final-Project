@@ -1,0 +1,21 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "XXX.XXX.XXX.XXX",
+  "port": "22",
+  "target": "/LOCATION/ON/SERVER",
+  "ignore": [
+    "**/.DS_Store",
+    ".remote-sync.json",
+    ".git/**",
+    ".gitignore",
+    "**/.eslintrc.js",
+    "**/node_modules/**",
+    "**/node_modules/**/.*"
+  ],
+  "username": "YOUR_USERNAME",
+  "password": "YOUR_PASSWORD",
+  "watch": [],
+  "transport": "scp"
+}
