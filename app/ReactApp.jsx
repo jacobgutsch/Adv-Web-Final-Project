@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MyComponent from './components/MyComponent.jsx';
+import MyComponent from './components/HelloComponent.jsx';
 
 const element = (
   <div>

@@ -4,7 +4,7 @@ class HelloComponent extends React.Component {
   render() {
     if(this.props.asPageHeader) {
       return (
-        <div className='page-header'>
+        <div className='w3-container'>
           <h1>{this.props.message}</h1>
         </div>
       );
