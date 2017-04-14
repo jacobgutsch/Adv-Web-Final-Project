@@ -1,10 +1,10 @@
 {
-  "uploadOnSave": false,
+  "uploadOnSave": true,
   "useAtomicWrites": false,
   "deleteLocal": false,
-  "hostname": "XXX.XXX.XXX.XXX",
+  "hostname": "192.168.56.101",
   "port": "22",
-  "target": "/LOCATION/ON/SERVER",
+  "target": "home/gutschj/finalProject",
   "ignore": [
     "**/.DS_Store",
     ".remote-sync.json",
@@ -14,8 +14,8 @@
     "**/node_modules/**",
     "**/node_modules/**/.*"
   ],
-  "username": "YOUR_USERNAME",
-  "password": "YOUR_PASSWORD",
+  "username": "gutschj",
+  "password": "overninek",
   "watch": [],
   "transport": "scp"
 }
