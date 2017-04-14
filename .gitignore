@@ -38,3 +38,4 @@ jspm_packages
 
 # atom remote sync json file
 .remote-sync.json
+.remote-sync.json
