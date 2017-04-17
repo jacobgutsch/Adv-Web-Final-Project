@@ -10,13 +10,19 @@ const navBarStyle = {
   width: '100%'
 };
 
+const dropbtnStyle = {
+  display: 'inline-block',
+  color: 'white',
+  padding: '14px 16px',
+};
+
 const element = (
   <div>
     <div style={navBarStyle} className="w3-bar w3-black">
       <a href="#" className="w3-bar-item w3-button">Home</a>
       <a href="#" className="w3-bar-item w3-dropdown-hover">
         <button className="w3-button">Hover Over Me!</button>
-        <div className="w3-dropdown-content w3-bar-block w3-border">
+        <div style={dropbtnStyle} className="w3-dropdown-content w3-bar-block w3-border">
           <a href="#" className="w3-bar-item w3-button">Link 1</a>
           <a href="#" className="w3-bar-item w3-button">Link 2</a>
           <a href="#" className="w3-bar-item w3-button">Link 3</a>
