@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MyComponent from './components/HelloComponent.jsx';
 
 const navBarStyle = {
   position: 'fixed',
@@ -12,7 +11,6 @@ const navBarStyle = {
 
 
 const element = (
-  <div>
     <div style={navBarStyle} className="w3-bar w3-light-grey">
       <a href="#" className="w3-bar-item w3-button">Home</a>
       <a href="#" className="w3-bar-item w3-button">Link 1</a>
@@ -25,9 +23,6 @@ const element = (
         </div>
       </div>
     </div>
-    <MyComponent asPageHeader message="Hello from ReactApp.jsx" />
-    <MyComponent message="This is the second header" />
-  </div>
 );
 
 ReactDOM.render(
