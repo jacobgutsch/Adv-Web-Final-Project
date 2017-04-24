@@ -4,12 +4,6 @@ class NavBar extends React.Component {
 
   render() {
 
-    const navBarStyle = {
-      position: 'fixed',
-      left: 0,
-      top: 0,
-      width: '100%'
-    };
     return (
       <div  className='w3-container'>
         <div className="w3-top">
