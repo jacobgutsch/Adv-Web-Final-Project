@@ -5,9 +5,9 @@ class NavBar extends React.Component {
   render() {
 
     return (
-      <div  className='w3-container'>
+      <div  className='w3-container w3-margin'>
         <div className="w3-top">
-          <div className="w3-bar w3-light-grey">
+          <div className="w3-bar w3-light-blue">
             <a href="#" className="w3-bar-item w3-button">Home</a>
             <a href="#" className="w3-bar-item w3-button">Link 1</a>
             <div className="w3-dropdown-hover">

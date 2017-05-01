@@ -1,6 +1,8 @@
 // Bring in express as our server
 import express from 'express';
 
+import data from './data/database.json';
+
 // Bring in configuration from the config.js file
 import config from './config';
 
@@ -19,6 +21,22 @@ server.use((req, res, next) => {
 // Serve the react app from the ejs index file when root is accessed
 server.get('/', (req, res) => {
   res.render('index');
+});
+
+server.get('/api/games', (req,res) => {
+  res.json(data);
+});
+
+server.get('/api/games/:id', (req,res) => {
+  let foundGame = data.find((game) => {
+    return (game.id == req.params.id);
+  });
+
+  if(foundGame === undefined) {
+    res.json({});
+  } else {
+    res.json(foundGame);
+  }
 });
 
 // Serve all other files in the public folder statically

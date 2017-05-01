@@ -1,6 +1,10 @@
 [
   { "id": 1, "name": "Galaxia", "year": "1998", "genre": "2D Fixed Shooter",
     "description": "A blast from the past, Galaxia revisits the golden age of arcade games, playing similarily to the original it's based off of: Galaga.",
-    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": 
+    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "../public/images/Galaga.png"
+  },
+  { "id": 2, "name": "What?!", "year": "2005", "genre": "2D Puzzle Platformer",
+    "description": "One of the most confusing games yet, 'What?!' will leave you asking more questions than you thought you ever would.",
+    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "../public/images/Galaga.png"
   }
 ]
