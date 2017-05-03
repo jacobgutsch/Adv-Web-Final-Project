@@ -1,7 +1,5 @@
 var db = require('./db');
 
-db.view('pages/all_data', (err, res) => {
-  res.forEach((row) => {
-    console.log(row);
-  });
+db.view('pages/byName', {key: 'A Game'}, (err, res) => {
+  console.log(res);
 });
