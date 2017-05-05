@@ -24,40 +24,39 @@ class Games extends React.Component {
     }
 
     let myStyle = {
-      border: 'solid black 1px'
+      border: 'solid black 1px',
+      textAlign: 'center'
     };
 
+    let cellStyle = {
+      textAlign: 'center'
+    };
+
+    let modalID = `gameModal-${this.state.gameData.id}`;
+
     let summary = (
-      <div className='movieSummary'>
-        <table>
-          <tbody>
-            <tr>
-              <span color='green' className='summaryTitle'>{this.state.gameData.name}</span>
-            </tr>
-            <tr>
-              <img height='160px' className="w3-circle" src='./public/images/Galaga.png' alt='Galaxia' />
-            </tr>
-          </tbody>
-        </table>
+      <div onClick={() => { $(`#${modalID}`)[0].style.display='block'; }} className='movieSummary' style={cellStyle}>
+        {this.state.gameData.name}<br/>
+      <img height='200px' width='200px' style={{padding: '10px 10px 10px 10px'}} className="w3-circle w3-hover-opacity" src={this.state.gameData.image} alt='Galaxia' />
       </div>
     );
 
     let button = (
-      <button type="button" onClick={() => { $('#myModal')[0].style.display='block'; }}
-        data-toggle="modal" data-target="#myModal" className="w3-button w3-black">More Info</button>
+      <button type="button" onClick={() => { $(`#${modalID}`)[0].style.display='block'; }}
+        data-toggle="modal" data-target={`#${modalID}`} className="w3-button w3-black">More Info</button>
     );
 
     return (
 
-      <div className='w3-container w3-hoverable' style={myStyle}>
+      <div className='w3-container w3-animate-opacity w3-cyan' style={myStyle}>
         {summary}
         {button}
 
-        <div id="myModal" className="w3-modal fade" role="dialog">
+        <div id={modalID} className="w3-modal fade w3-animate-opacity" role="dialog">
           <div className="w3-modal-content">
 
             <header className="w3-containter w3-light-grey">
-              <button type="button" className="close" onClick={() => { $('#myModal')[0].style.display='none'; }} data-dismiss="w3-modal"></button>
+              <button type="button" className="close" onClick={() => { $(`#${modalID}`)[0].style.display='none';}} data-dismiss="w3-modal"></button>
               <h4>{this.state.gameData.name}</h4>
             </header>
 
@@ -65,7 +64,7 @@ class Games extends React.Component {
               <table style={myStyle} >
                 <tbody>
                   <tr>
-                    <th colSpan="4"><img className="round" src={this.state.gameData.image} alt="Galaxia.png"></img></th>
+                    <th colSpan="4"><img height="300px" className="round" src={this.state.gameData.image} alt="Galaxia.png"></img></th>
                   </tr>
                   <tr>
                     <th>ID: {this.state.gameData.id}</th>
@@ -83,7 +82,7 @@ class Games extends React.Component {
             </div>
 
             <footer className="w3-containter w3-light-grey">
-              <button type="button" className="btn btn-default" onClick={() => { $('#myModal')[0].style.display='none'; }} data-dismiss="w3-modal">Close</button>
+              <button type="button" className="btn btn-default" onClick={() => { $(`#${modalID}`)[0].style.display='none'; }} data-dismiss="w3-modal">Close</button>
             </footer>
 
           </div>

@@ -1,10 +1,22 @@
 [
   { "id": 1, "name": "Galaxia", "year": "1998", "genre": "2D Fixed Shooter",
     "description": "A blast from the past, Galaxia revisits the golden age of arcade games, playing similarily to the original it's based off of: Galaga.",
-    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "../public/images/Galaga.png"
+    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "./images/Galaga.png"
   },
   { "id": 2, "name": "What?!", "year": "2005", "genre": "2D Puzzle Platformer",
     "description": "One of the most confusing games yet, 'What?!' will leave you asking more questions than you thought you ever would.",
-    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "../public/images/Galaga.png"
+    "developers": "Matt Podborny, Erich Giesfeldt, Jacob Gutsch", "image": "./images/what.png"
+  },
+  { "id": 3, "name": "Mayro Space Adventure", "year": "2011", "genre": "3D Platformer",
+    "description": "Mayro is back, exploring space and all its various planets. Jump from planet to planet to save the princess!",
+    "developers": "Erich Giesfeldt, Jacob Gutsch", "image": "./images/mario.png"
+  },
+  { "id": 4, "name": "Hammer and Bolt", "year": "2003", "genre": "3D Shooter Adventure",
+    "description": "Your favorite space faring duo is back, ready to take on space. Choose from several guns and wreck havoc!",
+    "developers": "Diane Christie, Erich Giesfeldt, Jacob Gutsch", "image": "./images/ratchet.png"
+  },
+  { "id": 5, "name": "Wak-Man", "year": "1995", "genre": "2D Survival",
+    "description": "In this spin-off of Pac Man, your goal is to survive as long as possible, eat all the dots, and maybe even some fruit!",
+    "developers": "Seth Berrier, Erich Giesfeldt, Jacob Gutsch", "image": "./images/Pacman.png"
   }
 ]
