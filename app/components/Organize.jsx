@@ -1,8 +1,5 @@
 import React from 'react';
 import Games from './Games.jsx';
-import NavBar from './NavBar.jsx';
-
-import * as ApiHelper from '../apiHelper';
 
 class Organize extends React.Component {
   render() {
@@ -12,7 +9,7 @@ class Organize extends React.Component {
       textAlign: 'center'
     };
 
-    console.log(this.props.sort);
+    console.log(this.props.sort.sortBy);
 
     if(this.sort == null || this.sort == '') {
       return (
@@ -68,7 +65,7 @@ class Organize extends React.Component {
 
 
 Organize.propTypes = {
-  sort: React.PropTypes.string
+  sort: React.PropTypes.func
 };
 
 export default Organize;
