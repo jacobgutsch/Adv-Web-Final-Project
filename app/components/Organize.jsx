@@ -2,6 +2,9 @@ import React from 'react';
 import Games from './Games.jsx';
 
 class Organize extends React.Component {
+
+
+
   render() {
 
     let tableStyle = {
@@ -9,9 +12,9 @@ class Organize extends React.Component {
       textAlign: 'center'
     };
 
-    console.log(this.props.sort.sortBy);
+    console.log(this.props.sort);
 
-    if(this.sort == null || this.sort == '') {
+    if(this.props.sort == null || this.props.sort == '' || this.props.sort == 'Id') {
       return (
         <table className="w3-table w3-centered" style={{width: '100%'}}>
           <tbody>
@@ -35,37 +38,99 @@ class Organize extends React.Component {
           </tbody>
         </table>
       );
-    } else if(this.sort == 'Name') {
+    } else if(this.props.sort == 'Name') {
       return (
-        <table className="w3-table w3-centered" style={{width: '100%'}}>
-          <tbody>
-            <tr>
-              <th style={tableStyle}>
-                <Games id={1}/>
-              </th>
-              <th style={tableStyle}>
-                <Games id={4}/>
-              </th>
-              <th style={tableStyle}>
-                <Games id={3}/>
-              </th>
-              <th style={tableStyle}>
-                <Games id={5}/>
-              </th>
-              <th style={tableStyle}>
-                <Games id={2}/>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+        <div>
+          <table className="w3-table w3-centered" style={{width: '100%'}}>
+            <tbody>
+              <tr>
+                <th style={tableStyle}>
+                  <Games id={1}/>
+                </th>
+                <th style={tableStyle}>
+                  <Games id={4}/>
+                </th>
+                <th style={tableStyle}>
+                  <Games id={3}/>
+                </th>
+                <th style={tableStyle}>
+                  <Games id={5}/>
+                </th>
+                <th style={tableStyle}>
+                  <Games id={2}/>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       );
+    } else if(this.props.sort == 'Year') {
+      return (
+        <div>
+          <div>
+            <table className="w3-table w3-centered" style={{width: '100%'}}>
+              <tbody>
+                <tr>
+                  <th style={tableStyle}>
+                    <Games id={5}/>
+                  </th>
+                  <th style={tableStyle}>
+                    <Games id={1}/>
+                  </th>
+                  <th style={tableStyle}>
+                    <Games id={4}/>
+                  </th>
+                  <th style={tableStyle}>
+                    <Games id={2}/>
+                  </th>
+                  <th style={tableStyle}>
+                    <Games id={3}/>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    } else if(this.props.sort == 'Genre') {
+      return (
+        <div>
+          <div>
+            <div>
+              <table className="w3-table w3-centered" style={{width: '100%'}}>
+                <tbody>
+                  <tr>
+                    <th style={tableStyle}>
+                      <Games id={1}/>
+                    </th>
+                    <th style={tableStyle}>
+                      <Games id={2}/>
+                    </th>
+                    <th style={tableStyle}>
+                      <Games id={5}/>
+                    </th>
+                    <th style={tableStyle}>
+                      <Games id={3}/>
+                    </th>
+                    <th style={tableStyle}>
+                      <Games id={4}/>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (<p>Invalid Sort Type</p>);
     }
   }
 }
 
 
 Organize.propTypes = {
-  sort: React.PropTypes.func
+  sort: React.PropTypes.string
 };
 
 export default Organize;
