@@ -12,6 +12,7 @@ class App extends React.Component {
     };
   }
 
+
   changeSort(SortBy) {
     this.setState({
       sortBy: SortBy

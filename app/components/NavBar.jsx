@@ -8,7 +8,6 @@ class NavBar extends React.Component {
         <div className="w3-top">
           <div className="w3-bar w3-indigo">
             <a href="http://www.uwstout.edu/" className="w3-bar-item w3-button">Home</a>
-            <a href="#" className="w3-bar-item w3-button">Link 1</a>
             <div className="w3-dropdown-hover">
               <button className="w3-button">Sort By</button>
               <div className="w3-dropdown-content w3-bar-block w3-card-4">
@@ -18,7 +17,12 @@ class NavBar extends React.Component {
                 <a href="#Id" onClick={() => {this.props.sort('Id');}} className="w3-bar-item w3-button">Id</a>
               </div>
             </div>
-            <a href="#" className="w3-bar-item w3-button">Filter By</a>
+            <a href="https://www.facebook.com/uwstout/" className="w3-bar-item w3-button">
+              <img height="20px" src="../images/fb.png"></img>
+            </a>
+            <a href="https://twitter.com/UWStout" className="w3-bar-item w3-button">
+              <img height="20px" src="../images/twitter.png"></img>
+            </a>
           </div>
         </div>
       </div>
