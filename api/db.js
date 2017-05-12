@@ -5,6 +5,6 @@ var db = new(cradle.Connection)(
   `http://${CONFIG.couchDBHost}`,
   CONFIG.couchDBPort, {
     auth: {username: 'admin', password: '@#erFGbn'}
-  }).database('gdd-games');
+  }).database('gdd-games-gutsch');
 
 module.exports = db;

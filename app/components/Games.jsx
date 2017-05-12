@@ -9,7 +9,7 @@ class Games extends React.Component {
 
     ApiHelper.fetchGame(props.id).then((gameData) => {
       this.setState({
-        gameData: gameData
+        gameData: gameData[0].value
       });
     });
 

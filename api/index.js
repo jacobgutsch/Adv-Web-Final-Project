@@ -5,7 +5,7 @@ var db = require('./db');
 const router = express.Router();
 
 // Get all games data from CouchDB
-router.get('/gdd-games', (req, res) => {
+router.get('/gdd-games-gutsch', (req, res) => {
   console.info('Requst at gdd-games');
   db.view('pages/All', (err, doc) => {
     let results = [];
@@ -17,7 +17,7 @@ router.get('/gdd-games', (req, res) => {
 });
 
 // Get one game data from CouchDB, based upon ID
-router.get('/gdd-games/by-id/:id', (req, res) => {
+router.get('/gdd-games-gutsch/by-id/:id', (req, res) => {
   console.info('Requst at gdd-games id');
   let id = parseInt(req.params.id);
   db.view('pages/byID', {key: id}, (err, doc) => {

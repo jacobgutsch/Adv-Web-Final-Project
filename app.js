@@ -6,6 +6,8 @@ import data from './data/database.json';
 // Bring in configuration from the config.js file
 import config from './config';
 
+import apiRouter from './api';
+
 // Create a new express server
 const server = express();
 
@@ -23,21 +25,7 @@ server.get('/', (req, res) => {
   res.render('index');
 });
 
-server.get('/api/games', (req,res) => {
-  res.json(data);
-});
-
-server.get('/api/games/:id', (req,res) => {
-  let foundGame = data.find((game) => {
-    return (game.id == req.params.id);
-  });
-
-  if(foundGame === undefined) {
-    res.json({});
-  } else {
-    res.json(foundGame);
-  }
-});
+server.use('/api', apiRouter);
 
 // Serve all other files in the public folder statically
 server.use(express.static('public'));
